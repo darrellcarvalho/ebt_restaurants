@@ -9,4 +9,4 @@ restaurants <- read_csv(file, col_types = "ccccccccc")
 
 results <- restaurants %>%
   geocode(street = street_address, city = city, postalcode = zip_code,
-          method = "osm")
+          method = "osm", return_addresses = TRUE)
